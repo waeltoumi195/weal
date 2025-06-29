@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 40px;
+    
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-right: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: #f2ca46;
+    color: black;
+    font-size: 20px; /* 🔥 يكبر الخط وقت hover */
+    transition: 0.3s;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* -------- Responsive Navbar -------- */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background-color: #000;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.8);
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.hero {
+    background: url('../images/background.png') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #f2ca46;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: black;
+    color: #f2ca46;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.hero .btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+footer {
+    background-color: #424141;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ---------- Section Nos Salles ---------- */
+.salles {
+    padding: 100px 50px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.salles h1 {
+    font-size: 40px;
+    color: #f2ca46;
+    margin-bottom: 40px;
+}
+
+.salles-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.salle-card {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 320px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.salle-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.salle-card h2 {
+    margin: 15px 0;
+    color: #000;
+}
+
+.salle-card p {
+    padding: 0 15px 15px;
+    color: #555;
+}
+
+.salle-card .btn {
+    display: inline-block;
+    margin: 0 0 20px 0;
+    background-color: black;
+    color: #f2ca46;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.salle-card .btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+.salle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .salles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+/* ---------- Section À Propos ---------- */
+.apropos {
+    padding: 100px 50px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.apropos h1 {
+    font-size: 40px;
+    color: #f2ca46;
+    margin-bottom: 40px;
+}
+
+.apropos-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.apropos-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.apropos-text p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.apropos-img {
+    flex: 1;
+    min-width: 300px;
+}
+
+.apropos-img img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .apropos-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apropos-text {
+        text-align: center;
+    }
+}
+
+
+
+
+/* ---------- Section Contact ---------- */
+.contact {
+    padding: 100px 50px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 40px;
+    color: #f2ca46;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f2ca46;
+    box-shadow: 0 0 5px rgba(242, 202, 70, 0.5);
+}
+
+.contact-form .btn {
+    background-color: black;
+    color: #f2ca46;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form .btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+
+.shape {
+    position: absolute;
+    width: 50px; /* 🔥 بدل الحجم حسب ما تحب */
+    height: 50px;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    transition: all 1s ease;
+}
+
+
+
+.shape {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    z-index: 2;
+    transition: all 1s ease;
+}

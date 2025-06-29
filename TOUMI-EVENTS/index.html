@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOUMI EVENTS - Accueil</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+    <div class="logo">
+    <a href="index.html">
+        <img src="images/logo2_Plan de travail 1.png" alt="TOUMI EVENTS">
+    </a>
+</div>
+
+    <nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <ul id="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="salles.html">Nos Salles</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <section class="hero">
+        <h1>Votre événement, notre passion</h1>
+        <h2>Réservez votre salle de rêve facilement</h2>
+        <a href="salles.html" class="btn">Voir Nos Salles</a>
+    </section>
+
+
+    <img src="images/decor_Plan de travail 1.png" class="shape" alt="Decor">
+
+    <footer>
+        <p>&copy; 2025 TOUMI EVENTS. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        const shape = document.querySelector('.shape');
+
+        function moveShape() {
+            const windowWidth = window.innerWidth - 60;
+            const windowHeight = window.innerHeight - 60;
+
+            const randomX = Math.floor(Math.random() * windowWidth);
+            const randomY = Math.floor(Math.random() * windowHeight);
+
+            shape.style.left = `${randomX}px`;
+            shape.style.top = `${randomY}px`;
+
+           
+            const randomRotation = Math.floor(Math.random() * 360);
+            shape.style.transform = `translate(-50%, -50%) rotate(${randomRotation}deg)`;
+        }
+
+        moveShape();
+        setInterval(moveShape, 2000); 
+    </script>
+
+</body>
+</html>

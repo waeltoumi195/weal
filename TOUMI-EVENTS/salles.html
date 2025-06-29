@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TOUMI EVENTS - Location de salles de fêtes en Tunisie. Organisation d'événements, mariages, anniversaires et plus. Réservez facilement votre salle idéale.">    <title>TOUMI EVENTS - Nos Salles</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+    <a href="index.html">
+        <img src="images/logo2_Plan de travail 1.png" alt="TOUMI EVENTS">
+    </a>
+</div>
+
+    <nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <ul id="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="salles.html">Nos Salles</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="salles">
+    <h1>Nos Salles</h1>
+    <div class="salles-container">
+
+        <div class="salle-card">
+            <img src="images/salle1.jpg" alt="Salle Royale">
+            <h2>Salle Royale</h2>
+            <p>Grande capacité avec décoration luxueuse.</p>
+            <a href="#" class="btn">Voir plus</a>
+        </div>
+
+        <div class="salle-card">
+            <img src="images/salle2.jpg" alt="Salle Prestige">
+            <h2>Salle Prestige</h2>
+            <p>Ambiance élégante pour vos événements privés et professionnels.</p>
+            <a href="#" class="btn">Voir plus</a>
+        </div>
+
+        <div class="salle-card">
+            <img src="images/salle3.jpg" alt="Salle Classique">
+            <h2>Salle Classique</h2>
+            <p>Confort et charme pour toutes vos occasions.</p>
+            <a href="#" class="btn">Voir plus</a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 TOUMI EVENTS. Tous droits réservés.</p>
+</footer>
+
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+
+    toggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

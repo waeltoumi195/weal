@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOUMI EVENTS - À propos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+    <a href="index.html">
+        <img src="images/logo2_Plan de travail 1.png" alt="TOUMI EVENTS">
+    </a>
+</div>
+
+    <nav>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <ul id="nav-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="salles.html">Nos Salles</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="apropos">
+    <h1>À propos de TOUMI EVENTS</h1>
+    <div class="apropos-container">
+        <div class="apropos-text">
+            <p>
+                Chez <strong>TOUMI EVENTS</strong>, notre mission est de transformer vos rêves en réalité. 
+                Avec des années d'expérience dans l'organisation d'événements, nous vous proposons des salles élégantes,
+                des services de qualité et un accompagnement personnalisé pour que chaque moment soit inoubliable.
+            </p>
+            <p>
+                Mariages, fêtes, séminaires ou anniversaires, nous mettons à votre disposition des espaces modernes, 
+                un cadre raffiné et une équipe dédiée pour répondre à tous vos besoins.
+            </p>
+            <p>
+                <strong>Votre satisfaction est notre priorité.</strong>
+            </p>
+        </div>
+        <div class="apropos-img">
+            <img src="images/apropos_Plan de travail 1.png" alt="Événement">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 TOUMI EVENTS. Tous droits réservés.</p>
+</footer>
+
+<script>
+    const toggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+
+    toggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
